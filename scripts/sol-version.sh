@@ -1,0 +1,1 @@
+find ./contracts -type f -exec sed -i -e 's/pragma solidity \^[[:digit:]]\+\.[[:digit:]]\+\.[[:digit:]]\+/pragma solidity \^0\.8\.4/g' {} \;

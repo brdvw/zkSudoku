@@ -1,0 +1,40 @@
+{
+  "name": "zkSudoku",
+  "version": "0.1.0",
+  "description": "Sudoku game using ZKP",
+  "email": "brndvision@gmail.com",
+  "main": "index.js",
+  "scripts": {
+    "compile:contracts": "npx hardhat compile --force",
+    "develop": "npx hardhat node",
+    "deploy:localhost": "npx hardhat deploy --tags complete",
+    "test": "npx hardhat test",
+    "compile:circuits": "bash scripts/compile-all-circuits.sh",
+    "generate:proofs": "bash scripts/generate-all-proofs.sh",
+    "sol-version:fix": "bash scripts/sol-version.sh",
+    "generate:proof": "bash scripts/generate-proof.sh",
+    "setup:circom": "bash scripts/setup-circom.sh",
+    "test:Progress": "npm run compile:circuits && npm run sol-version:fix && npm run generate:proofs && npm run compile:contracts && npx hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brdvw/zkSudoku.git"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "chai": "^4.3.6",
+    "circom_tester": "^0.0.19",
+    "circomlib": "^2.0.2",
+    "circomlib-matrix": "^1.0.0",
+    "circomlibjs": "^0.1.1",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.6.1",
+    "hardhat": "^2.9.1",
+    "hardhat-contract-sizer": "^2.4.0",
+    "hardhat-deploy": "^0.10.6",
+    "hardhat-gas-reporter": "^1.0.7",
+    "snarkjs": "^0.4.13",
+    "web3-utils": "^1.7.0"
+  }
+}
